@@ -5,7 +5,7 @@ import com.assessment.webapi.rest.reportutils.ExtentTestManager;
 import org.testng.annotations.Listeners;
 
 @Listeners(com.assessment.webapi.rest.reportutils.TestListner.class )
-public class BaseTest {
+public class TestBase {
     public static final String TEST_CONFIG_FILE_PATH = "/test_config.properties";
 
     public static final String EXTENT_REPORT_FILE_PATH = new LoadTestProperties(TEST_CONFIG_FILE_PATH).getProperty("extent_report_path");

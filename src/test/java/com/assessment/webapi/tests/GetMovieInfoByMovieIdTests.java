@@ -3,7 +3,7 @@ package com.assessment.webapi.tests;
 import com.assessment.webapi.rest.assertionutil.ExpectedErrorMessage;
 import com.assessment.webapi.rest.assertionutil.TestAssertions;
 import com.assessment.webapi.rest.data.TestDataProvider;
-import com.assessment.webapi.rest.testbase.BaseTest;
+import com.assessment.webapi.rest.testbase.TestBase;
 import com.assessment.webapi.rest.testutils.LanguageOption;
 import com.assessment.webapi.rest.testutils.RestUtils;
 import org.testng.annotations.Test;
@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
  * 3) Some of the tests are marked as Regression candidate for future test runoo
  */
 
-public class GetMovieInfoByMovieIdTests extends BaseTest{
+public class GetMovieInfoByMovieIdTests extends TestBase {
 
     /**
      * Test ID - 001 - Find Movie Details By Valid Movie Id
@@ -35,7 +35,7 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
 
         /* Build the GET Call "/movie/{movie_id}" request and execute it*/
         String response = RestUtils.postGetRequest(RestUtils.buildGetRequest(),
-                        BaseTest.GET_MOVIE_BY_ID_ENDPOINT+"   "+BaseTest.VALID_MOVIE_ID+"   "+BaseTest.API_KEY);
+                        TestBase.GET_MOVIE_BY_ID_ENDPOINT+"   "+ TestBase.VALID_MOVIE_ID+"   "+ TestBase.API_KEY);
 
         /* Validate the response returned by above call with expected */
         TestAssertions.assertMovieDetails(response);
@@ -57,8 +57,8 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
 
         /* Build the GET Call "/movie/{movie_id}" request and execute it*/
         String response = RestUtils.postGetRequest(RestUtils.buildGetRequest(),
-                BaseTest.GET_MOVIE_BY_ID_ENDPOINT+BaseTest.VALID_MOVIE_ID+BaseTest.API_KEY
-                        +BaseTest.LANGUAGE_OPTION + LanguageOption.FRENCH.getValue());
+                TestBase.GET_MOVIE_BY_ID_ENDPOINT+ TestBase.VALID_MOVIE_ID+ TestBase.API_KEY
+                        + TestBase.LANGUAGE_OPTION + LanguageOption.FRENCH.getValue());
 
         /* Validate the response returned by above call with expected */
         TestAssertions.assertMovieDetails(response);
@@ -81,8 +81,8 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
 
         /* Build the GET Call "/movie/{movie_id}" request and execute it*/
         String response = RestUtils.postGetRequest(RestUtils.buildGetRequest(),
-                BaseTest.GET_MOVIE_BY_ID_ENDPOINT+BaseTest.VALID_MOVIE_ID+BaseTest.API_KEY
-                        +BaseTest.LANGUAGE_OPTION + LanguageOption.INVALID.getValue());
+                TestBase.GET_MOVIE_BY_ID_ENDPOINT+ TestBase.VALID_MOVIE_ID+ TestBase.API_KEY
+                        + TestBase.LANGUAGE_OPTION + LanguageOption.INVALID.getValue());
 
         /* Validate the response returned by above call with expected */
         TestAssertions.assertMovieDetails(response);
@@ -107,10 +107,10 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
         String response =
             RestUtils.postGetRequest(
                 RestUtils.buildGetRequest(),
-                BaseTest.GET_MOVIE_BY_ID_ENDPOINT
+                TestBase.GET_MOVIE_BY_ID_ENDPOINT
                     + alphaNumericMovieId
-                    + BaseTest.API_KEY
-                    + BaseTest.LANGUAGE_OPTION
+                    + TestBase.API_KEY
+                    + TestBase.LANGUAGE_OPTION
                     + LanguageOption.SPANISH.getValue());
 
         /* Validate the response returned expected error message */
@@ -140,7 +140,7 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
         String response =
             RestUtils.postGetRequest(
                 RestUtils.buildGetRequest(),
-                BaseTest.GET_MOVIE_BY_ID_ENDPOINT + nonExistMovieId + BaseTest.API_KEY);
+                TestBase.GET_MOVIE_BY_ID_ENDPOINT + nonExistMovieId + TestBase.API_KEY);
 
         /* Validate the response returned expected error message */
         TestAssertions.assertErrorMessage(
@@ -168,8 +168,8 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
         String response =
             RestUtils.postGetRequest(
                 RestUtils.buildGetRequest(),
-                BaseTest.GET_MOVIE_BY_ID_ENDPOINT
-                    + BaseTest.VALID_MOVIE_ID
+                TestBase.GET_MOVIE_BY_ID_ENDPOINT
+                    + TestBase.VALID_MOVIE_ID
                     + "?api_key="
                     + invalidApiKey);
 
@@ -198,7 +198,7 @@ public class GetMovieInfoByMovieIdTests extends BaseTest{
         String response =
                 RestUtils.postGetRequest(
                         RestUtils.buildGetRequest(),
-                        BaseTest.GET_MOVIE_BY_ID_ENDPOINT + BaseTest.VALID_MOVIE_ID + "?api_key=");
+                        TestBase.GET_MOVIE_BY_ID_ENDPOINT + TestBase.VALID_MOVIE_ID + "?api_key=");
 
         /* Validate the response returned expected error message */
         TestAssertions.assertErrorMessage(

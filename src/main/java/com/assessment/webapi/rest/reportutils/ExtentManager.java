@@ -1,6 +1,6 @@
 package com.assessment.webapi.rest.reportutils;
 
-import com.assessment.webapi.rest.testbase.BaseTest;
+import com.assessment.webapi.rest.testbase.TestBase;
 import com.relevantcodes.extentreports.ExtentReports;
 
 public class ExtentManager {
@@ -8,7 +8,8 @@ public class ExtentManager {
 
   public static synchronized ExtentReports getReporter() {
     if (extent == null) {
-      extent = new ExtentReports(BaseTest.EXTENT_REPORT_FILE_PATH, true);
+      String workingDir = System.getProperty("user.dir");
+      extent = new ExtentReports(workingDir+TestBase.EXTENT_REPORT_FILE_PATH, true);
     }
     return extent;
   }
