@@ -1,12 +1,11 @@
 package com.assessment.webapi.tests;
 
-import com.assessment.webapi.rest.assertionUtil.ExpectedErrorMessage;
-import com.assessment.webapi.rest.assertionUtil.TestAssertions;
+import com.assessment.webapi.rest.assertionutil.ExpectedErrorMessage;
+import com.assessment.webapi.rest.assertionutil.TestAssertions;
 import com.assessment.webapi.rest.data.TestDataProvider;
-import com.assessment.webapi.rest.testBase.BaseTest;
-import com.assessment.webapi.rest.testUtils.LanguageOption;
-import com.assessment.webapi.rest.testUtils.RestUtils;
-import org.testng.annotations.BeforeClass;
+import com.assessment.webapi.rest.testbase.BaseTest;
+import com.assessment.webapi.rest.testutils.LanguageOption;
+import com.assessment.webapi.rest.testutils.RestUtils;
 import org.testng.annotations.Test;
 
 /**

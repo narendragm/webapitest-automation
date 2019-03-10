@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.responseEntities;
+package com.assessment.webapi.rest.response.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  *  response received from GET Call By Movie Id
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ProductionCountryResponseValidationEntity {
+public class ProductionCountryResponseDto {
   @SerializedName("iso_3166_1")
   @Expose
   private String iso31661;

@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.responseEntities;
+package com.assessment.webapi.rest.response.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
@@ -11,7 +11,7 @@ import java.util.List;
  *  response received from GET Call By Movie Id
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MovieCollectionResponseValidationEntity {
+public class MovieCollectionResponseDto {
   @SerializedName("adult")
   @Expose
   private Boolean adult;
@@ -22,7 +22,7 @@ public class MovieCollectionResponseValidationEntity {
 
   @SerializedName("belongs_to_collection")
   @Expose
-  private BelongsToCollectionResponseValidationEntity belongsToCollectionResponseValidationEntity;
+  private BelongsToCollectionResponseDto belongsToCollectionResponseDto;
 
   @SerializedName("budget")
   @Expose
@@ -30,7 +30,7 @@ public class MovieCollectionResponseValidationEntity {
 
   @SerializedName("genres")
   @Expose
-  private List<GenreResponseValidationEntity> genres = null;
+  private List<GenreResponseDto> genres = null;
 
   @SerializedName("homepage")
   @Expose
@@ -66,11 +66,11 @@ public class MovieCollectionResponseValidationEntity {
 
   @SerializedName("production_companies")
   @Expose
-  private List<ProductionCompanyResponseValidationEntity> productionCompanies = null;
+  private List<ProductionCompanyResponseDto> productionCompanies = null;
 
   @SerializedName("production_countries")
   @Expose
-  private List<ProductionCountryResponseValidationEntity> productionCountries = null;
+  private List<ProductionCountryResponseDto> productionCountries = null;
 
   @SerializedName("release_date")
   @Expose
@@ -86,7 +86,7 @@ public class MovieCollectionResponseValidationEntity {
 
   @SerializedName("spoken_languages")
   @Expose
-  private List<SpokenLanguageResponseValidationEntity> spokenLanguages = null;
+  private List<SpokenLanguageResponseDto> spokenLanguages = null;
 
   @SerializedName("status")
   @Expose
@@ -128,14 +128,14 @@ public class MovieCollectionResponseValidationEntity {
     this.backdropPath = backdropPath;
   }
 
-  public BelongsToCollectionResponseValidationEntity
-      getBelongsToCollectionResponseValidationEntity() {
-    return belongsToCollectionResponseValidationEntity;
+  public BelongsToCollectionResponseDto
+  getBelongsToCollectionResponseDto() {
+    return belongsToCollectionResponseDto;
   }
 
-  public void setBelongsToCollectionResponseValidationEntity(
-      BelongsToCollectionResponseValidationEntity belongsToCollectionResponseValidationEntity) {
-    this.belongsToCollectionResponseValidationEntity = belongsToCollectionResponseValidationEntity;
+  public void setBelongsToCollectionResponseDto(
+      BelongsToCollectionResponseDto belongsToCollectionResponseDto) {
+    this.belongsToCollectionResponseDto = belongsToCollectionResponseDto;
   }
 
   public Integer getBudget() {
@@ -146,11 +146,11 @@ public class MovieCollectionResponseValidationEntity {
     this.budget = budget;
   }
 
-  public List<GenreResponseValidationEntity> getGenres() {
+  public List<GenreResponseDto> getGenres() {
     return genres;
   }
 
-  public void setGenres(List<GenreResponseValidationEntity> genres) {
+  public void setGenres(List<GenreResponseDto> genres) {
     this.genres = genres;
   }
 
@@ -218,21 +218,21 @@ public class MovieCollectionResponseValidationEntity {
     this.posterPath = posterPath;
   }
 
-  public List<ProductionCompanyResponseValidationEntity> getProductionCompanies() {
+  public List<ProductionCompanyResponseDto> getProductionCompanies() {
     return productionCompanies;
   }
 
   public void setProductionCompanies(
-      List<ProductionCompanyResponseValidationEntity> productionCompanies) {
+      List<ProductionCompanyResponseDto> productionCompanies) {
     this.productionCompanies = productionCompanies;
   }
 
-  public List<ProductionCountryResponseValidationEntity> getProductionCountries() {
+  public List<ProductionCountryResponseDto> getProductionCountries() {
     return productionCountries;
   }
 
   public void setProductionCountries(
-      List<ProductionCountryResponseValidationEntity> productionCountries) {
+      List<ProductionCountryResponseDto> productionCountries) {
     this.productionCountries = productionCountries;
   }
 
@@ -260,11 +260,11 @@ public class MovieCollectionResponseValidationEntity {
     this.runtime = runtime;
   }
 
-  public List<SpokenLanguageResponseValidationEntity> getSpokenLanguages() {
+  public List<SpokenLanguageResponseDto> getSpokenLanguages() {
     return spokenLanguages;
   }
 
-  public void setSpokenLanguages(List<SpokenLanguageResponseValidationEntity> spokenLanguages) {
+  public void setSpokenLanguages(List<SpokenLanguageResponseDto> spokenLanguages) {
     this.spokenLanguages = spokenLanguages;
   }
 

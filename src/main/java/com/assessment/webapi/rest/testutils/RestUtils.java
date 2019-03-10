@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.testUtils;
+package com.assessment.webapi.rest.testutils;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.specification.RequestSpecification;

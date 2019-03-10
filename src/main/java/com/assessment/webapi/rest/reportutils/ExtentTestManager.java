@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.reportUtils;
+package com.assessment.webapi.rest.reportutils;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;

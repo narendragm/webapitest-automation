@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.responseEntities;
+package com.assessment.webapi.rest.response.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
@@ -9,21 +9,21 @@ import com.google.gson.annotations.SerializedName;
  *  response received from GET Call By Movie Id
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SpokenLanguageResponseValidationEntity {
-  @SerializedName("iso_639_1")
+public class GenreResponseDto {
+  @SerializedName("id")
   @Expose
-  private String iso6391;
+  private Integer id;
 
   @SerializedName("name")
   @Expose
   private String name;
 
-  public String getIso6391() {
-    return iso6391;
+  public Integer getId() {
+    return id;
   }
 
-  public void setIso6391(String iso6391) {
-    this.iso6391 = iso6391;
+  public void setId(Integer id) {
+    this.id = id;
   }
 
   public String getName() {

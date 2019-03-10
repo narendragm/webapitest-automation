@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.reportUtils;
+package com.assessment.webapi.rest.reportutils;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

@@ -1,6 +1,6 @@
-package com.assessment.webapi.rest.reportUtils;
+package com.assessment.webapi.rest.reportutils;
 
-import com.assessment.webapi.rest.testBase.BaseTest;
+import com.assessment.webapi.rest.testbase.BaseTest;
 import com.relevantcodes.extentreports.ExtentReports;
 
 public class ExtentManager {

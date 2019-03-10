@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.reportUtils;
+package com.assessment.webapi.rest.reportutils;
 
 import org.testng.annotations.ITestAnnotation;
 import org.testng.internal.annotations.IAnnotationTransformer;

@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.assertionUtil;
+package com.assessment.webapi.rest.assertionutil;
 
 /**
  * 1) Built this Enum class for Standard Error message assertions

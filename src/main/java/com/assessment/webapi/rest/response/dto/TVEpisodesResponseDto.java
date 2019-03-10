@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.responseEntities;
+package com.assessment.webapi.rest.response.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
@@ -11,7 +11,7 @@ import java.util.List;
  *  response received from GET Call By Movie Id
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TVEpisodesResponseValidationEntity {
+public class TVEpisodesResponseDto {
 
   @SerializedName("air_date")
   @Expose
@@ -19,7 +19,7 @@ public class TVEpisodesResponseValidationEntity {
 
   @SerializedName("crew")
   @Expose
-  private List<CrewResponseValidationEntity> crewResponseValidationEntity = null;
+  private List<CrewResponseDto> crewResponseDto = null;
 
   @SerializedName("episode_number")
   @Expose
@@ -69,12 +69,12 @@ public class TVEpisodesResponseValidationEntity {
     this.airDate = airDate;
   }
 
-  public List<CrewResponseValidationEntity> getCrew() {
-    return crewResponseValidationEntity;
+  public List<CrewResponseDto> getCrew() {
+    return crewResponseDto;
   }
 
-  public void setCrew(List<CrewResponseValidationEntity> crewResponseValidationEntity) {
-    this.crewResponseValidationEntity = crewResponseValidationEntity;
+  public void setCrew(List<CrewResponseDto> crewResponseDto) {
+    this.crewResponseDto = crewResponseDto;
   }
 
   public Integer getEpisodeNumber() {

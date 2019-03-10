@@ -1,10 +1,10 @@
-package com.assessment.webapi.rest.testBase;
+package com.assessment.webapi.rest.testbase;
 
 import com.assessment.webapi.rest.config.LoadTestProperties;
-import com.assessment.webapi.rest.reportUtils.ExtentTestManager;
+import com.assessment.webapi.rest.reportutils.ExtentTestManager;
 import org.testng.annotations.Listeners;
 
-@Listeners(com.assessment.webapi.rest.reportUtils.TestListner.class )
+@Listeners(com.assessment.webapi.rest.reportutils.TestListner.class )
 public class BaseTest {
     public static final String TEST_CONFIG_FILE_PATH = "/test_config.properties";
 

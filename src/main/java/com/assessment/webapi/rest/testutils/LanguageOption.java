@@ -1,4 +1,4 @@
-package com.assessment.webapi.rest.testUtils;
+package com.assessment.webapi.rest.testutils;
 
 public enum LanguageOption {
     US_English("en-US"),
