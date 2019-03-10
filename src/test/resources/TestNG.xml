@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WebApi Test Assessment Suite" parallel="none" thread-count="0">
+    <listeners>
+        <listener class-name="com.assessment.webapi.rest.reportUtils.TestListner"/>
+        <listener class-name="com.assessment.webapi.rest.reportUtils.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="GetMovieInfoByMovieId">
+        <!--<packages>
+            <package name="com.assessment.webapi.tests.*" />
+        </packages>-->
+
+        <!--<groups>
+            <run>
+                <include name="Regression"  />
+            </run>
+        </groups>-->
+
+        <classes>
+            <class name="com.assessment.webapi.tests.GetMovieInfoByMovieIdTests">
+                <methods>
+                    <include name="getMovieDetailsByValidMovieId"></include>
+                    <include name="getMovieDetailsByValidMovieIdAndLangOpt"></include>
+                    <include name="getMovieDetailsByValidMovieIdAndInvalidLangOpt"></include>
+                    <include name="getMovieDetailsByValidMovieIdAndMissingApiKey"></include>
+                    <!--<include name="getMovieDetailsByValidMovieIdAndInvalidApiKey"></include>
+                    <include name="getMovieDetailsByNonExistingMovieId"></include>
+                    <include name="getMovieDetailsByInvalidMovieIdAndValidLangOpt"></include>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
