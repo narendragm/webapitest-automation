@@ -2,8 +2,11 @@ package com.assessment.webapi.rest.assertionutil;
 
 import com.assessment.webapi.rest.response.dto.ErrorMessageResponseDto;
 import com.assessment.webapi.rest.response.dto.MovieCollectionResponseDto;
+import com.assessment.webapi.rest.testutils.JasonReader;
 import com.google.gson.Gson;
 import org.testng.Assert;
+
+import java.util.Map;
 
 /**
  * 1) Only subset of test assertions written due to demonstrative purpose of the project
@@ -17,17 +20,18 @@ public class TestAssertions {
   private static final Gson gson = new Gson();
 
   public static void assertMovieDetails(String response) {
+    JasonReader jasonReader = new JasonReader();
+    Map<String, Object> expectedResult =  jasonReader.getExpectedResult();
     MovieCollectionResponseDto movieCollectionResponseDto =
         gson.fromJson(response, MovieCollectionResponseDto.class);
 
-    Assert.assertEquals(movieCollectionResponseDto.getId(), (Integer) 550);
-    Assert.assertEquals(movieCollectionResponseDto.getImdbId(), "tt0137523");
-    Assert.assertEquals(movieCollectionResponseDto.getBudget(), (Integer) 63000000);
+    Assert.assertEquals(movieCollectionResponseDto.getId(), (Integer) expectedResult.get("id"));
+    Assert.assertEquals(movieCollectionResponseDto.getImdbId(), expectedResult.get("imdb_id"));
+    Assert.assertEquals(movieCollectionResponseDto.getBudget(), (Integer) expectedResult.get("budget"));
     Assert.assertEquals(
-        movieCollectionResponseDto.getHomepage(),
-        "http://www.foxmovies.com/movies/fight-club");
-    Assert.assertEquals(movieCollectionResponseDto.getOriginalTitle(), "Fight Club");
-    Assert.assertEquals(movieCollectionResponseDto.getOriginalLanguage(), "en");
+        movieCollectionResponseDto.getHomepage(), expectedResult.get("homepage"));
+    Assert.assertEquals(movieCollectionResponseDto.getOriginalTitle(), expectedResult.get("original_title"));
+    Assert.assertEquals(movieCollectionResponseDto.getOriginalLanguage(), expectedResult.get("original_language"));
   }
 
   public static void assertErrorMessage(String response, String statusCode, String errorMessage) {
