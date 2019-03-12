@@ -2,7 +2,7 @@ package com.assessment.webapi.rest.assertionutil;
 
 import com.assessment.webapi.rest.response.dto.ErrorMessageResponseDto;
 import com.assessment.webapi.rest.response.dto.MovieCollectionResponseDto;
-import com.assessment.webapi.rest.testutils.JasonReader;
+import com.assessment.webapi.rest.testutils.JsonReader;
 import com.google.gson.Gson;
 import org.testng.Assert;
 
@@ -20,8 +20,8 @@ public class TestAssertions {
   private static final Gson gson = new Gson();
 
   public static void assertMovieDetails(String response) {
-    JasonReader jasonReader = new JasonReader();
-    Map<String, Object> expectedResult =  jasonReader.getExpectedResult();
+    JsonReader jsonReader = new JsonReader();
+    Map<String, Object> expectedResult =  jsonReader.getExpectedResult();
     MovieCollectionResponseDto movieCollectionResponseDto =
         gson.fromJson(response, MovieCollectionResponseDto.class);
 
