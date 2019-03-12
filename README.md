@@ -44,8 +44,7 @@ Instructions to run the project:
 3) Once project in IDE, you need to add your Developer API Key(see instruction for Create API Developer key)
 at ..\webapitest-automation\src\main\resources\test_config.properties
 Replace angular braces with your API Key 
-"api_key=?api_key=<Your Own APi KEY>”
-
+“"api_key=?api_key=<Your Own APi KEY>””
 4) Right click on TestNG xml file located as follows and run tests
 ..\webapitest-automation\src\test\resources\TestSuite_AllTests.xml
 5) Alternatively you can right click on test class located as follows and run tests
