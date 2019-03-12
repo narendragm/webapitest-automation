@@ -21,6 +21,27 @@ public class TestDataProvider {
         };
     }
 
+    @DataProvider(name = "SpecialCharDataProvider")
+    public Object[][] specialCharsPrefixandSuffix() {
+        return new Object[][] {
 
+                { "~!@#$%^&()+{}|\\?><][;.,/\\=-`\\s\\t\\n" },
+                {"\\"}
+
+        };
+    }
+
+    @DataProvider(name = "MidSpecialCharDataProvider")
+    public Object[][] specialCharsMiddle() {
+        return new Object[][] {
+                { "~!@#$" },
+                { "^&()_" },
+                { "+{}|\"" },
+                { "?><][" },
+                { ";.,/\\" },
+                { "=-`\\s" },
+                { "\\t\\n" },
+        };
+    }
 
 }

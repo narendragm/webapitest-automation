@@ -3,9 +3,9 @@
 <suite name="WebApi Test Assessment Suite" parallel="none" thread-count="0">
 
     <test name="GetMovieInfoByMovieId">
-        <!--<packages>
+        <packages>
             <package name="com.assessment.webapi.tests.*" />
-        </packages>-->
+        </packages>
 
         <!--<groups>
             <run>
@@ -13,7 +13,7 @@
             </run>
         </groups>-->
 
-        <classes>
+        <!--<classes>
             <class name="com.assessment.webapi.tests.GetMovieInfoByMovieIdTests">
                 <methods>
                     <include name="getMovieDetailsByValidMovieId"></include>
@@ -25,6 +25,6 @@
                     <include name="getMovieDetailsByInvalidMovieIdAndValidLangOpt"></include>
                 </methods>
             </class>
-        </classes>
+        </classes>-->
     </test>
 </suite>
