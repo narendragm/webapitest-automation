@@ -2,9 +2,10 @@ package com.assessment.webapi.rest.testbase;
 
 import com.assessment.webapi.rest.config.LoadTestProperties;
 import com.assessment.webapi.rest.reportutils.ExtentTestManager;
+import com.assessment.webapi.rest.reportutils.TestListener;
 import org.testng.annotations.Listeners;
 
-@Listeners(com.assessment.webapi.rest.reportutils.TestListner.class )
+@Listeners(TestListener.class )
 public class TestBase {
     public static final String TEST_CONFIG_FILE_PATH = "/test_config.properties";
 
