@@ -16,8 +16,8 @@ public class TestDataProvider {
     @DataProvider(name = "RandomNumericDataProvider")
     public Object[][] nonExitingMovieId(){
         return new Object[][] {
-                { RandomStringUtils.randomNumeric(19) },
-                { RandomStringUtils.randomNumeric(20) }
+                { RandomStringUtils.randomNumeric(15) },
+                { RandomStringUtils.randomNumeric(15) }
         };
     }
 
