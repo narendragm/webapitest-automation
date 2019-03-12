@@ -38,7 +38,7 @@ Create API Developer key for site www.themoviedb.org:
 2) Navigate to "https://www.themoviedb.org/settings/api" Developer API key for this site
 
 
-Instructions to run the project:
+Instructions to run the Tests:
 1) Open the cloned project in IDE like IntelliJ/Eclipse IDE (I am using IntelliJ)
 2) Let the project download all the dependencies, perform other project building tasks.
 3) Once project in IDE, you need to add your Developer API Key(see instruction for Create API Developer key)
