@@ -8,16 +8,16 @@ public class TestDataProvider {
     @DataProvider(name = "InvalidMovieIds")
     public Object[][] invalidMovieId(){
         return new Object[][] {
-                { RandomStringUtils.randomAlphanumeric(15) },
-                { RandomStringUtils.randomAlphanumeric(14) }
+                { RandomStringUtils.randomAlphanumeric(20) },
+                { RandomStringUtils.randomAlphanumeric(20) }
         };
     }
 
     @DataProvider(name = "RandomNumericDataProvider")
     public Object[][] nonExitingMovieId(){
         return new Object[][] {
-                { RandomStringUtils.randomNumeric(15) },
-                { RandomStringUtils.randomNumeric(14) }
+                { RandomStringUtils.randomNumeric(19) },
+                { RandomStringUtils.randomNumeric(20) }
         };
     }
 
