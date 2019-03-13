@@ -52,3 +52,5 @@ api_key=?api_key=”Your Own API KEY”
 6) Another way is-
 a) Open terminal and navigate to project folder for this project and run command
 mvn clean install (you should have Maven set up on your machine)
+Check TestNG emailable report at
+..\webapitest-automation\target\surefire-reports\emailable-report.html
